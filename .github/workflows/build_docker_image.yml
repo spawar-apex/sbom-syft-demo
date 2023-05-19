@@ -26,6 +26,10 @@ jobs:
     - name: Build Docker Image from Dockerfile
       id: DockImage1
       run: docker build . --file Dockerfile --tag sbom_syft_demo:$(date +%s)
+    - name: Docker Image digest
+      run: |
+        echo ${{ steps.DockImage1.outputs.digest }}
+        echo ${{ steps.DockImage1.outputs.tags }}
     outputs:
       dockerimagetag: ${{ steps.DockImage1.outputs.tags }}
 
