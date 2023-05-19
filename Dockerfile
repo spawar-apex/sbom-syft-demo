@@ -6,7 +6,6 @@ RUN apt-get -y update
 RUN apt-get -y install nginx 
 
 RUN apt-get install -y php-cli \
-    && php-curl \
     && php-gd \
     && php-mbstring \
     && php-sqlite3 \
