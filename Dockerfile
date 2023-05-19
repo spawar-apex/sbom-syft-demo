@@ -6,7 +6,6 @@ RUN apt-get -y update
 RUN apt-get -y install nginx 
 
 RUN apt-get install -y php-cli \
-    && apache2 \
     && ca-certificates \
     && curl \
     && software-properties-common
