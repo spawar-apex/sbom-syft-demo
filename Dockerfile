@@ -6,14 +6,9 @@ RUN apt-get -y update
 RUN apt-get -y install nginx 
 
 RUN apt-get install -y php-cli \
-    && php-gd \
-    && php-mbstring \
-    && php-sqlite3 \
-    && php-xml \
-    && php-mysql \
-    && lsb-release \
-    && ca-certificates \
     && apt-transport-https \
+    && ca-certificates \
+    && curl \
     && software-properties-common
 
 # Install composer to run Drupal
