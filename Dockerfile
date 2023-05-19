@@ -3,12 +3,7 @@ FROM ubuntu:20.04
 
 RUN apt-get -y update
 
-RUN apt-get -y install nginx 
-
-RUN apt-get install -y php-cli \
-    && ca-certificates \
-    && curl \
-    && software-properties-common
+RUN apt-get -y install nginx
 
 RUN apt-get install -y php7.4 \
     && php7.4-mysql \
