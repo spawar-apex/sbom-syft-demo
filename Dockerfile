@@ -1,5 +1,5 @@
 # Basic nginx dockerfile with Alpine 3.14
-FROM alpine:3.14
+FROM ubuntu:20.04
 
 RUN apt-get -y update
 
