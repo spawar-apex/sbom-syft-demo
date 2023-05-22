@@ -9,17 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build the Docker image
-      uses: actions/checkout@v3
-    
+      uses: actions/checkout@v3   
     - name: Build Docker Image from Dockerfile
       id: DockImage1
       run: docker build . --file Dockerfile --tag sbom_syft_demo:latest
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Build and push Docker image
+      uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+      with:
+        context: .
+        file: ./Dockerfile
+        push: ${{ github.ref == 'refs/heads/main' }}
+        tags: |
+          spawarapex/druapalapex10:latest
     - name: Docker Image digest
       run: |
-        echo ${{ steps.DockImage1.outputs.digest }}
-        echo ${{ steps.DockImage1.outputs.tags }}
-    outputs:
-      dockerimagetag: ${{ steps.DockImage1.outputs.tags }}
+        echo ${{ steps.docker_build.outputs.digest }}
+        echo ${{ steps.docker_build.outputs.tags }}
 
   GenerateSBOM:
     runs-on: ubuntu-latest
