@@ -45,5 +45,5 @@ jobs:
         # A file location to output the SBOM
         format: cyclonedx-json
         # The version of Syft to use
-        syft-version: 1.4.1 # optional
+        syft-version: v1.4.1 # optional
     
