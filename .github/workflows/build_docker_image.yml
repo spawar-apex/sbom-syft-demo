@@ -54,9 +54,7 @@ jobs:
       uses: DependencyTrack/gh-upload-sbom@v2.0.0
       with:
         # Dependency-Track hostname
-        serverhostname: 35.225.72.107
-        # Dependency-Track port
-        port: 8080 # optional, default is 443
+        serverhostname: ${{ secrets.DEPENDENCYTRACK_HOSTNAME }}
         # Dependency-Track protocol
         protocol: 'http' # optional, default is https
         # Dependency-Track API key
@@ -66,8 +64,6 @@ jobs:
         # Project name in Dependency-Track
         projectname: 'source _monorepo' # optional
         # Project version in Dependency-Track
-        projectversion: # optional
-        # Automatically create the project in Dependency-Track if it doesn't exist
-        autocreate: # optional, default is false
+        projectversion: '1.0'   # optional
         # Path and filename of the BOM
         bomfilename: /tmp/sbom-GenerateSBOM-dsbom.cyclonedx.json # optional, default is bom.xml
