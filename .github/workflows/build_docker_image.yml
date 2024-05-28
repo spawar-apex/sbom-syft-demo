@@ -62,7 +62,7 @@ jobs:
         # Project in Dependency-Track
         project: 'ec5d56be-097d-469d-84ee-99d99e5227f2' # optional
         # Project name in Dependency-Track
-        projectname: 'source _monorepo' # optional
+        projectname: 'source_monorepo' # optional
         # Project version in Dependency-Track
         projectversion: '1.0'   # optional
         # Path and filename of the BOM
