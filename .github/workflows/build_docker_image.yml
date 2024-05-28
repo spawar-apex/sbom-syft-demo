@@ -75,4 +75,4 @@ jobs:
         # Automatically create the project in Dependency-Track if it doesn't exist
         autocreate: # optional, default is false
         # Path and filename of the BOM
-        bomfilename: "sbom-GenerateSBOM-dsbom.cyclonedx.json" # optional, default is bom.xml
+        bomfilename: "${{ ANCHORE_SBOM_ACTION_PRIOR_ARTIFACT }}" # optional, default is bom.xml
