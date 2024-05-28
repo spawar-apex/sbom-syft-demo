@@ -66,6 +66,7 @@ jobs:
         # Project name in Dependency-Track
         projectname: 'source_monorepo' # optional
         # Project version in Dependency-Track
+        autoCreate: true
         projectversion: '1.0'   # optional
         # Path and filename of the BOM
         bomfilename: /tmp/sbom-GenerateSBOM-dsbom.cyclonedx.json # optional, default is bom.xml
