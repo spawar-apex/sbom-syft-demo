@@ -66,5 +66,5 @@ jobs:
         # Project name in Dependency-Track
         projectname: 'source _monorepo' # optional
         # Path and filename of the BOM
-        bomfilename: "/tmp/sbom-action-m5utrw/sbom_syft_demo.cyclonedx.json" # optional, default is bom.xml
+        bomfilename: "sbom_syft_demo.cyclonedx.json" # optional, default is bom.xml
     
