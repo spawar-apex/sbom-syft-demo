@@ -47,12 +47,6 @@ jobs:
         # The version of Syft to use
         syft-version: v1.4.1 # optional
       continue-on-error: true
-
-    - shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
-      run: |
-        echo "$SUPER_SECRET"
         
     - name: Upload BOM to Dependency-Track
       # You may pin to the exact commit or the version.
@@ -60,13 +54,13 @@ jobs:
       uses: DependencyTrack/gh-upload-sbom@v2.0.0
       with:
         # Dependency-Track hostname
-        serverhostname: 'www.swapnilpawar.com'
+        serverhostname: 'swapnilpawar.com'
         # Dependency-Track port
         port: 8080 # optional, default is 443
         # Dependency-Track protocol
         protocol: 'http' # optional, default is https
         # Dependency-Track API key
-        apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+        apikey: 'odt_zFO6DzLhK5mV4juXhE9VucYmrq5r6Ciu'
         # Project in Dependency-Track
         project: 'ec5d56be-097d-469d-84ee-99d99e5227f2' # optional
         # Project name in Dependency-Track
