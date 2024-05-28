@@ -54,7 +54,7 @@ jobs:
       uses: DependencyTrack/gh-upload-sbom@v2.0.0
       with:
         # Dependency-Track hostname
-        serverhostname: 35.225.72.107
+        serverhostname: 'www.swapnilpawar.com'
         # Dependency-Track port
         port: 8080 # optional, default is 443
         # Dependency-Track protocol
