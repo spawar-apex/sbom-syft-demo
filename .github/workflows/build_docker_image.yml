@@ -57,7 +57,7 @@ jobs:
         # Dependency-Track hostname
         serverhostname: ${{ secrets.DEPENDENCYTRACK_HOSTNAME }}
         apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
-        projectname: 'sbom_demo' # optional
+        projectname: 'sbom_demo_new' # optional
         autocreate: true
         projectversion: 'master'   # optional
         bomfilename: /tmp/sbom-demo2.cyclonedx.json # optional, default is bom.xml
