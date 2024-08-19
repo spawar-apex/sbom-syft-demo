@@ -58,6 +58,7 @@ jobs:
         port: 443 # optional, default is 443
         protocol: 'https' # optional, default is https
         apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+        project: '4cf4526c-2633-4b79-8585-5fc498b256dd'
         projectname: 'sbom_demo' # optional
         autocreate: true
         projectversion: 'master'   # optional
