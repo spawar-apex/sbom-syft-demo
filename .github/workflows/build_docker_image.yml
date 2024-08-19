@@ -44,7 +44,7 @@ jobs:
         dependency-snapshot: false
         upload-artifact: true
         output-file: /tmp/sbom-dsbom.cyclonedx.json
-        format: cyclonedx
+        format: cyclonedx-json
       continue-on-error: true
         
     - name: Upload BOM to Dependency-Track
