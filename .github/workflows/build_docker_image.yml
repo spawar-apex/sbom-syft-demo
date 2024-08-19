@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build the Docker image
-      uses: actions/checkout@v3   
+      uses: actions/checkout@v4   
     - name: Build Docker Image from Dockerfile
       id: DockImage1
       run: docker build . --file Dockerfile --tag sbom_syft_demo:latest
